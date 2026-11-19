@@ -1,0 +1,78 @@
+{
+  "manifest_version": 2,
+  "mod": {
+    "id": "device-latency-on-hover",
+    "name": "Devices: Latency on Hover",
+    "version": "0.1.0-dev.1",
+    "author": "Mike8040",
+    "description": "Shows cached device latency in the native footer after the mouse hints.",
+    "documentation": "readme"
+  },
+  "built_against": {
+    "bitwig_version": "6.1.7",
+    "platform": "windows",
+    "architecture": "x64"
+  },
+  "resources": {
+    "readme": {
+      "kind": "file",
+      "path": "README.md",
+      "media_type": "text/markdown"
+    }
+  },
+  "targets": {
+    "dsF.dNa": {
+      "kind": "method",
+      "owner": "dsF",
+      "name": "dNa",
+      "descriptor": "()V"
+    },
+    "dqz.Gef": {
+      "kind": "method",
+      "owner": "dqz",
+      "name": "Gef",
+      "descriptor": "(Ldwe;DD)V"
+    },
+    "dsF.Bqk": {
+      "kind": "field",
+      "owner": "dsF",
+      "name": "Bqk",
+      "descriptor": "LdXL;"
+    }
+  },
+  "hooks": [
+    {
+      "id": "native-footer-slot",
+      "transform": "INSERT_BEFORE_FINAL_RETURN",
+      "bridge": {
+        "method": "place",
+        "descriptor": "(LdsF;)V",
+        "args": [
+          "this"
+        ]
+      },
+      "target": "dsF.dNa"
+    },
+    {
+      "id": "native-pointer-update",
+      "transform": "INSERT_AT_ENTRY",
+      "bridge": {
+        "method": "update",
+        "descriptor": "(Ldwe;DD)V",
+        "args": [
+          "arg1",
+          "arg2",
+          "arg4"
+        ]
+      },
+      "target": "dqz.Gef"
+    }
+  ],
+  "helper": {
+    "jar": "helper.jar",
+    "class": "org.mike8040.devicelatency.LatencyHooks"
+  },
+  "opens": [
+    "dsF.Bqk"
+  ]
+}

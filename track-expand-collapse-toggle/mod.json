@@ -1,0 +1,40 @@
+{
+  "manifest_version": 2,
+  "mod": {
+    "id": "track-expand-collapse-toggle",
+    "name": "Arranger: Expand/Collapse Toggle",
+    "area": "Track",
+    "author": "Mike8040",
+    "version": "0.1.0-dev.1",
+    "description": "Toggles selected Arranger groups or row heights in one direction.",
+    "documentation": "readme"
+  },
+  "built_against": {
+    "bitwig_version": "6.1.7",
+    "platform": "windows",
+    "architecture": "x64"
+  },
+  "resources": {
+    "readme": {
+      "kind": "file",
+      "path": "README.md",
+      "media_type": "text/markdown"
+    }
+  },
+  "requires": [
+    {
+      "id": "action-menu-composition-framework",
+      "min_version": "0.8.0-dev.1"
+    }
+  ],
+  "registrations": [
+    {
+      "id": "actions",
+      "consumer": "action-menu-composition-framework",
+      "descriptor": "actions.properties",
+      "jar": "helper.jar"
+    }
+  ],
+  "targets": {},
+  "hooks": []
+}

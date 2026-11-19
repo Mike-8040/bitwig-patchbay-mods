@@ -1,0 +1,81 @@
+{
+  "manifest_version": 2,
+  "mod": {
+    "id": "automation-point-value",
+    "name": "Automation: Point Value",
+    "version": "0.1.0-dev.2",
+    "author": "Mike8040",
+    "description": "Adds the native Inspector-style numeric control at the top of the point menu.",
+    "documentation": "readme"
+  },
+  "built_against": {
+    "bitwig_version": "6.1.7",
+    "platform": "windows",
+    "architecture": "x64"
+  },
+  "resources": {
+    "readme": {
+      "kind": "file",
+      "path": "README.md",
+      "media_type": "text/markdown"
+    }
+  },
+  "targets": {
+    "bjw.beI": {
+      "kind": "method",
+      "owner": "bjw",
+      "name": "beI",
+      "descriptor": "(LdMt;LdwF;)V"
+    },
+    "com.bitwig.ramona.core.jyE.Anf": {
+      "kind": "method",
+      "owner": "com/bitwig/ramona/core/jyE",
+      "name": "Anf",
+      "descriptor": "(Ljava/lang/String;Ljava/lang/String;Z)Z"
+    },
+    "com.bitwig.ramona.core.jyE.C2c": {
+      "kind": "method",
+      "owner": "com/bitwig/ramona/core/jyE",
+      "name": "C2c",
+      "descriptor": "(Z)Z"
+    },
+    "dPn.init": {
+      "kind": "method",
+      "owner": "dPn",
+      "name": "<init>",
+      "descriptor": "()V"
+    },
+    "dPn.fpX": {
+      "kind": "method",
+      "owner": "dPn",
+      "name": "fpX",
+      "descriptor": "()LdAl;"
+    }
+  },
+  "hooks": [
+    {
+      "id": "inspector-value-at-top",
+      "transform": "INSERT_AT_ENTRY",
+      "bridge": {
+        "method": "addNumberField",
+        "descriptor": "(Lbjw;LdMt;LdwF;)V",
+        "args": [
+          "this",
+          "arg1",
+          "arg2"
+        ]
+      },
+      "target": "bjw.beI"
+    }
+  ],
+  "helper": {
+    "jar": "helper.jar",
+    "class": "org.mike8040.pointvalue.ValueHooks"
+  },
+  "opens": [
+    "com.bitwig.ramona.core.jyE.Anf",
+    "com.bitwig.ramona.core.jyE.C2c",
+    "dPn.fpX",
+    "dPn.init"
+  ]
+}

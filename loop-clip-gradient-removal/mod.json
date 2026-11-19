@@ -1,0 +1,58 @@
+{
+  "manifest_version": 2,
+  "mod": {
+    "id": "loop-clip-gradient-removal",
+    "name": "Arranger: Loop Clip Gradient Removal",
+    "author": "Mike8040",
+    "version": "0.1.0-dev.1",
+    "description": "Removes the horizontal overlay gradient on repeated clip segments.",
+    "documentation": "readme"
+  },
+  "built_against": {
+    "bitwig_version": "6.1.7",
+    "platform": "windows",
+    "architecture": "x64"
+  },
+  "resources": {
+    "readme": {
+      "kind": "file",
+      "path": "README.md",
+      "media_type": "text/markdown"
+    }
+  },
+  "targets": {
+    "brB.beI": {
+      "kind": "method",
+      "owner": "brB",
+      "name": "beI",
+      "descriptor": "(LBVS;Lcom/bitwig/graphics/ijY;LSZB;DDDDDDDDDDDZZZZDDD)V"
+    },
+    "brB.beI-2": {
+      "kind": "method",
+      "owner": "brB",
+      "name": "beI",
+      "descriptor": "(Lcom/bitwig/graphics/ijY;DDDDDDDDDZDDD)V"
+    }
+  },
+  "hooks": [
+    {
+      "id": "omit-loop-overlay",
+      "transform": "REPLACE_INVOKE",
+      "bridge": {
+        "method": "omitOverlay",
+        "descriptor": "(LbrB;Lcom/bitwig/graphics/ijY;DDDDDDDDDZDDD)V",
+        "args": []
+      },
+      "target": "brB.beI",
+      "match": {
+        "opcode": "INVOKEVIRTUAL",
+        "target": "brB.beI-2",
+        "occurrence": 1
+      }
+    }
+  ],
+  "helper": {
+    "jar": "helper.jar",
+    "class": "org.mike8040.loopclipgradientremoval.LoopGradient"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "manifest_version": 2,
+  "mod": {
+    "id": "toggle-play-start-marker-via-arranger-selection",
+    "name": "Arranger: Toggle Play Start Marker via Arranger Selection",
+    "version": "0.1.0-dev.3",
+    "author": "Mike8040",
+    "description": "Toggles Bitwig's live Arranger selection preference for the Play Start Marker.",
+    "documentation": "readme"
+  },
+  "built_against": {
+    "bitwig_version": "6.1.7",
+    "platform": "windows",
+    "architecture": "x64"
+  },
+  "resources": {
+    "readme": {
+      "kind": "file",
+      "path": "README.md",
+      "media_type": "text/markdown"
+    }
+  },
+  "requires": [
+    {
+      "id": "action-menu-composition-framework",
+      "min_version": "0.8.0-dev.1"
+    }
+  ],
+  "registrations": [
+    {
+      "id": "actions",
+      "consumer": "action-menu-composition-framework",
+      "descriptor": "actions.properties",
+      "jar": "helper.jar"
+    }
+  ],
+  "targets": {},
+  "hooks": []
+}

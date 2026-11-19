@@ -1,0 +1,65 @@
+{
+  "manifest_version": 2,
+  "mod": {
+    "id": "toggle-spray-can-tool",
+    "name": "Commands: Toggle Spray Can Tool",
+    "area": "Editor",
+    "version": "0.1.0-dev.2",
+    "author": "Mike8040",
+    "description": "Switches between the native Spray Can Tool and the previously selected tool.",
+    "documentation": "readme"
+  },
+  "built_against": {
+    "bitwig_version": "6.1.7",
+    "platform": "windows",
+    "architecture": "x64"
+  },
+  "resources": {
+    "readme": {
+      "kind": "file",
+      "path": "README.md",
+      "media_type": "text/markdown"
+    }
+  },
+  "requires": [
+    {
+      "id": "action-menu-composition-framework",
+      "min_version": "0.8.0-dev.1"
+    }
+  ],
+  "registrations": [
+    {
+      "id": "actions",
+      "consumer": "action-menu-composition-framework",
+      "descriptor": "actions.properties",
+      "jar": "helper.jar"
+    }
+  ],
+  "targets": {
+    "UEA.ymo": {
+      "kind": "method",
+      "owner": "UEA",
+      "name": "ymo",
+      "descriptor": "(LJKs;)V"
+    }
+  },
+  "hooks": [
+    {
+      "id": "remember-previous-tool",
+      "transform": "INSERT_AT_ENTRY",
+      "bridge": {
+        "method": "rememberPreviousTool",
+        "descriptor": "(LUEA;LJKs;)V",
+        "args": [
+          "this",
+          "arg1"
+        ]
+      },
+      "target": "UEA.ymo"
+    }
+  ],
+  "helper": {
+    "jar": "helper.jar",
+    "class": "org.mike8040.spraytoggle.SprayToggle"
+  }
+}

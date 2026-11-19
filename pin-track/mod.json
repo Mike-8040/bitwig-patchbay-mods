@@ -1,0 +1,862 @@
+{
+    "manifest_version":  2,
+    "mod":  {
+                "id":  "pin-track",
+                "name":  "Arranger: Pin Track",
+                "version":  "0.2.0-dev.2",
+                "author":  "Mike8040",
+                "description":  "Keeps selected native Arranger track rows fixed at the top or Main at the bottom.",
+                "documentation":  "readme"
+            },
+    "built_against":  {
+                          "bitwig_version":  "6.1.7",
+                          "platform":  "windows",
+                          "architecture":  "x64"
+                      },
+    "resources":  {
+                      "pins":  {
+                                   "kind":  "directory",
+                                   "path":  "pins",
+                                   "persistence":  "created"
+                               },
+                      "readme":  {
+                                     "kind":  "file",
+                                     "path":  "README.md",
+                                     "media_type":  "text/markdown"
+                                 }
+                  },
+    "targets":  {
+                    "dwF.jTs":  {
+                                    "kind":  "method",
+                                    "owner":  "dwF",
+                                    "name":  "jTs",
+                                    "descriptor":  "(DDLeqv;)LdMt;"
+                                },
+                    "aGj.sCA":  {
+                                    "kind":  "method",
+                                    "owner":  "aGj",
+                                    "name":  "sCA",
+                                    "descriptor":  "(LdwF;)LdwF;"
+                                },
+                    "dYH.beI":  {
+                                    "kind":  "method",
+                                    "owner":  "dYH",
+                                    "name":  "beI",
+                                    "descriptor":  "(Ljava/lang/Object;LdwF;)LdZi;"
+                                },
+                    "dZc.beI":  {
+                                    "kind":  "method",
+                                    "owner":  "dZc",
+                                    "name":  "beI",
+                                    "descriptor":  "(Lcom/bitwig/base/geom/PPR;LHLP;Z)LdZc;"
+                                },
+                    "bCf.Gef":  {
+                                    "kind":  "method",
+                                    "owner":  "bCf",
+                                    "name":  "Gef",
+                                    "descriptor":  "(Lcom/bitwig/flt/document/core/iface/uVN;LaZD;)V"
+                                },
+                    "bCh.beI":  {
+                                    "kind":  "method",
+                                    "owner":  "bCh",
+                                    "name":  "beI",
+                                    "descriptor":  "(LdwF;Lcom/bitwig/flt/document/core/iface/zCn;I)V"
+                                },
+                    "dXL.BBg":  {
+                                    "kind":  "method",
+                                    "owner":  "dXL",
+                                    "name":  "BBg",
+                                    "descriptor":  "(LdwF;I)V"
+                                },
+                    "bCh.Gef":  {
+                                    "kind":  "method",
+                                    "owner":  "bCh",
+                                    "name":  "Gef",
+                                    "descriptor":  "(LdwF;Lcom/bitwig/flt/document/core/iface/zCn;I)V"
+                                },
+                    "bCg.beI":  {
+                                    "kind":  "method",
+                                    "owner":  "bCg",
+                                    "name":  "beI",
+                                    "descriptor":  "(LdwF;LYCD;I)V"
+                                },
+                    "bCg.Gef":  {
+                                    "kind":  "method",
+                                    "owner":  "bCg",
+                                    "name":  "Gef",
+                                    "descriptor":  "(LdwF;LYCD;I)V"
+                                },
+                    "aIM.unz":  {
+                                    "kind":  "method",
+                                    "owner":  "aIM",
+                                    "name":  "unz",
+                                    "descriptor":  "()V"
+                                },
+                    "Arq.beI":  {
+                                    "kind":  "method",
+                                    "owner":  "Arq",
+                                    "name":  "beI",
+                                    "descriptor":  "(ZLjava/lang/String;)V"
+                                },
+                    "aGq.sCA":  {
+                                    "kind":  "method",
+                                    "owner":  "aGq",
+                                    "name":  "sCA",
+                                    "descriptor":  "(Lcom/bitwig/flt/document/core/iface/zCn;)V"
+                                },
+                    "bDm.qGB":  {
+                                    "kind":  "method",
+                                    "owner":  "bDm",
+                                    "name":  "qGB",
+                                    "descriptor":  "()V"
+                                },
+                    "aGq.Gef":  {
+                                    "kind":  "method",
+                                    "owner":  "aGq",
+                                    "name":  "Gef",
+                                    "descriptor":  "(Lcom/bitwig/flt/document/core/iface/uVN;)V"
+                                },
+                    "bDm.jTs":  {
+                                    "kind":  "method",
+                                    "owner":  "bDm",
+                                    "name":  "jTs",
+                                    "descriptor":  "(Z)V"
+                                },
+                    "aGq.Gef-2":  {
+                                      "kind":  "method",
+                                      "owner":  "aGq",
+                                      "name":  "Gef",
+                                      "descriptor":  "(LMNh;)V"
+                                  },
+                    "aGu.beI":  {
+                                    "kind":  "method",
+                                    "owner":  "aGu",
+                                    "name":  "beI",
+                                    "descriptor":  "(Lcxg;Lcom/bitwig/ramona/core/IqI;I)V"
+                                },
+                    "bDm.iMb":  {
+                                    "kind":  "method",
+                                    "owner":  "bDm",
+                                    "name":  "iMb",
+                                    "descriptor":  "(Z)V"
+                                },
+                    "aGu.Gef":  {
+                                    "kind":  "method",
+                                    "owner":  "aGu",
+                                    "name":  "Gef",
+                                    "descriptor":  "(Lcxg;Lcom/bitwig/ramona/core/IqI;I)V"
+                                },
+                    "buZ.beI":  {
+                                    "kind":  "method",
+                                    "owner":  "buZ",
+                                    "name":  "beI",
+                                    "descriptor":  "(IZLjava/util/List;)V"
+                                },
+                    "buZ.beI-2":  {
+                                      "kind":  "method",
+                                      "owner":  "buZ",
+                                      "name":  "beI",
+                                      "descriptor":  "(ILjava/util/List;Ljava/util/List;)V"
+                                  },
+                    "buZ.beI-3":  {
+                                      "kind":  "method",
+                                      "owner":  "buZ",
+                                      "name":  "beI",
+                                      "descriptor":  "(ZLjava/util/List;ILbDm;)V"
+                                  },
+                    "buT.beI":  {
+                                    "kind":  "method",
+                                    "owner":  "buT",
+                                    "name":  "beI",
+                                    "descriptor":  "(I)V"
+                                },
+                    "buC.beI":  {
+                                    "kind":  "method",
+                                    "owner":  "buC",
+                                    "name":  "beI",
+                                    "descriptor":  "(I)V"
+                                },
+                    "buZ.beI-4":  {
+                                      "kind":  "method",
+                                      "owner":  "buZ",
+                                      "name":  "beI",
+                                      "descriptor":  "(Ljava/util/List;ILbtR;)V"
+                                  },
+                    "btR.beI":  {
+                                    "kind":  "method",
+                                    "owner":  "btR",
+                                    "name":  "beI",
+                                    "descriptor":  "(I)V"
+                                },
+                    "bCf.beI":  {
+                                    "kind":  "method",
+                                    "owner":  "bCf",
+                                    "name":  "beI",
+                                    "descriptor":  "(DDLdKT;)Lcom/bitwig/flt/document/core/iface/clipboard/track/TrackInsertionPoint;"
+                                },
+                    "bCf.beI-2":  {
+                                      "kind":  "method",
+                                      "owner":  "bCf",
+                                      "name":  "beI",
+                                      "descriptor":  "(DDLUXW;ILdKT;)Lcom/bitwig/flt/document/core/iface/clipboard/track/TrackInsertionPoint;"
+                                  },
+                    "bCf.beI-3":  {
+                                      "kind":  "method",
+                                      "owner":  "bCf",
+                                      "name":  "beI",
+                                      "descriptor":  "(DDLUXW;IZZLdKT;)Lcom/bitwig/flt/document/core/iface/clipboard/track/TrackInsertionPoint;"
+                                  },
+                    "bCf.beI-4":  {
+                                      "kind":  "method",
+                                      "owner":  "bCf",
+                                      "name":  "beI",
+                                      "descriptor":  "(LdKT;)Lcom/bitwig/flt/document/core/iface/clipboard/track/TrackInsertionPoint;"
+                                  },
+                    "aZJ.beI":  {
+                                    "kind":  "method",
+                                    "owner":  "aZJ",
+                                    "name":  "beI",
+                                    "descriptor":  "(LOUi;)Lcom/bitwig/base/geom/Yk;"
+                                },
+                    "aZL":  {
+                                "kind":  "class",
+                                "class":  "aZL"
+                            },
+                    "aZM":  {
+                                "kind":  "class",
+                                "class":  "aZM"
+                            },
+                    "bCg":  {
+                                "kind":  "class",
+                                "class":  "bCg"
+                            },
+                    "bCh":  {
+                                "kind":  "class",
+                                "class":  "bCh"
+                            },
+                    "aGa.Bqk":  {
+                                    "kind":  "field",
+                                    "owner":  "aGa",
+                                    "name":  "Bqk",
+                                    "descriptor":  "LdVg;"
+                                },
+                    "bCg.beI-2":  {
+                                      "kind":  "field",
+                                      "owner":  "bCg",
+                                      "name":  "beI",
+                                      "descriptor":  "LbCf;"
+                                  },
+                    "bCh.beI-2":  {
+                                      "kind":  "field",
+                                      "owner":  "bCh",
+                                      "name":  "beI",
+                                      "descriptor":  "LbCf;"
+                                  },
+                    "dXL.init":  {
+                                     "kind":  "method",
+                                     "owner":  "dXL",
+                                     "name":  "\u003cinit\u003e",
+                                     "descriptor":  "()V"
+                                 },
+                    "dwF.Gef":  {
+                                    "kind":  "method",
+                                    "owner":  "dwF",
+                                    "name":  "Gef",
+                                    "descriptor":  "(Lcom/bitwig/graphics/ijY;)V"
+                                }
+                },
+    "hooks":  [
+                  {
+                      "id":  "capture-arranger-popup",
+                      "transform":  "INSERT_AT_ENTRY",
+                      "bridge":  {
+                                     "method":  "captureMenu",
+                                     "descriptor":  "(LdwF;DD)V",
+                                     "args":  [
+                                                  "this",
+                                                  "arg1",
+                                                  "arg3"
+                                              ]
+                                 },
+                      "target":  "dwF.jTs"
+                  },
+                  {
+                      "id":  "append-pin-options",
+                      "transform":  "WRAP_OBJECT_RETURN",
+                      "bridge":  {
+                                     "method":  "pinMenu",
+                                     "descriptor":  "(LdMt;)LdMt;",
+                                     "args":  [
+
+                                              ]
+                                 },
+                      "target":  "dwF.jTs"
+                  },
+                  {
+                      "id":  "capture-arranger-pane",
+                      "transform":  "INSERT_AT_ENTRY",
+                      "bridge":  {
+                                     "method":  "capturePane",
+                                     "descriptor":  "(LaGj;LdwF;)V",
+                                     "args":  [
+                                                  "this",
+                                                  "arg1"
+                                              ]
+                                 },
+                      "target":  "aGj.sCA"
+                  },
+                  {
+                      "id":  "wrap-native-pane",
+                      "transform":  "WRAP_OBJECT_RETURN",
+                      "bridge":  {
+                                     "method":  "wrap",
+                                     "descriptor":  "(LdwF;)LdwF;",
+                                     "args":  [
+
+                                              ]
+                                 },
+                      "target":  "aGj.sCA"
+                  },
+                  {
+                      "id":  "capture-arranger-size-registry",
+                      "transform":  "INSERT_AT_ENTRY",
+                      "bridge":  {
+                                     "method":  "captureRegistry",
+                                     "descriptor":  "(LdYH;)V",
+                                     "args":  [
+                                                  "this"
+                                              ]
+                                 },
+                      "target":  "dYH.beI"
+                  },
+                  {
+                      "id":  "use-visible-arranger-size",
+                      "transform":  "REPLACE_INVOKE",
+                      "bridge":  {
+                                     "method":  "rowSizes",
+                                     "descriptor":  "(Lcom/bitwig/base/geom/PPR;LHLP;Z)LdZc;",
+                                     "args":  [
+
+                                              ]
+                                 },
+                      "target":  "dYH.beI",
+                      "match":  {
+                                    "opcode":  "INVOKESTATIC",
+                                    "target":  "dZc.beI",
+                                    "occurrence":  1
+                                }
+                  },
+                  {
+                      "id":  "release-arranger-size-registry",
+                      "transform":  "WRAP_OBJECT_RETURN",
+                      "bridge":  {
+                                     "method":  "finishRegistry",
+                                     "descriptor":  "(LdZi;)LdZi;",
+                                     "args":  [
+
+                                              ]
+                                 },
+                      "target":  "dYH.beI"
+                  },
+                  {
+                      "id":  "register-native-track-view",
+                      "transform":  "INSERT_AT_ENTRY",
+                      "bridge":  {
+                                     "method":  "registerView",
+                                     "descriptor":  "(LbCf;)V",
+                                     "args":  [
+                                                  "this"
+                                              ]
+                                 },
+                      "target":  "bCf.Gef"
+                  },
+                  {
+                      "id":  "resync-after-track-add",
+                      "transform":  "INSERT_AT_ENTRY",
+                      "bridge":  {
+                                     "method":  "trackAdded",
+                                     "descriptor":  "(LbCh;)V",
+                                     "args":  [
+                                                  "this"
+                                              ]
+                                 },
+                      "target":  "bCh.beI"
+                  },
+                  {
+                      "id":  "insert-regular-row-at-visible-index",
+                      "transform":  "REPLACE_INVOKE",
+                      "bridge":  {
+                                     "method":  "insertRegularRow",
+                                     "descriptor":  "(LdXL;LdwF;I)V",
+                                     "args":  [
+
+                                              ]
+                                 },
+                      "target":  "bCh.beI",
+                      "match":  {
+                                    "opcode":  "INVOKEVIRTUAL",
+                                    "target":  "dXL.BBg",
+                                    "occurrence":  1
+                                }
+                  },
+                  {
+                      "id":  "resync-after-track-remove",
+                      "transform":  "INSERT_AT_ENTRY",
+                      "bridge":  {
+                                     "method":  "trackRemoved",
+                                     "descriptor":  "(LbCh;)V",
+                                     "args":  [
+                                                  "this"
+                                              ]
+                                 },
+                      "target":  "bCh.Gef"
+                  },
+                  {
+                      "id":  "resync-after-lane-add",
+                      "transform":  "INSERT_AT_ENTRY",
+                      "bridge":  {
+                                     "method":  "laneAdded",
+                                     "descriptor":  "(LbCg;)V",
+                                     "args":  [
+                                                  "this"
+                                              ]
+                                 },
+                      "target":  "bCg.beI"
+                  },
+                  {
+                      "id":  "insert-effect-row-at-visible-index",
+                      "transform":  "REPLACE_INVOKE",
+                      "bridge":  {
+                                     "method":  "insertEffectRow",
+                                     "descriptor":  "(LdXL;LdwF;I)V",
+                                     "args":  [
+
+                                              ]
+                                 },
+                      "target":  "bCg.beI",
+                      "match":  {
+                                    "opcode":  "INVOKEVIRTUAL",
+                                    "target":  "dXL.BBg",
+                                    "occurrence":  1
+                                }
+                  },
+                  {
+                      "id":  "resync-after-lane-remove",
+                      "transform":  "INSERT_AT_ENTRY",
+                      "bridge":  {
+                                     "method":  "laneRemoved",
+                                     "descriptor":  "(LbCg;)V",
+                                     "args":  [
+                                                  "this"
+                                              ]
+                                 },
+                      "target":  "bCg.Gef"
+                  },
+                  {
+                      "id":  "before-track-bounce",
+                      "transform":  "INSERT_AT_ENTRY",
+                      "bridge":  {
+                                     "method":  "beforeBounce",
+                                     "descriptor":  "(LaIM;)V",
+                                     "args":  [
+                                                  "this"
+                                              ]
+                                 },
+                      "target":  "aIM.unz"
+                  },
+                  {
+                      "id":  "after-track-bounce",
+                      "transform":  "INSERT_BEFORE_FINAL_RETURN",
+                      "bridge":  {
+                                     "method":  "afterBounce",
+                                     "descriptor":  "(LArq;)V",
+                                     "args":  [
+                                                  "this"
+                                              ]
+                                 },
+                      "target":  "Arq.beI"
+                  },
+                  {
+                      "id":  "rename-visible-track-header",
+                      "transform":  "REPLACE_INVOKE",
+                      "bridge":  {
+                                     "method":  "rename",
+                                     "descriptor":  "(LbDm;)V",
+                                     "args":  [
+
+                                              ]
+                                 },
+                      "target":  "aGq.sCA",
+                      "match":  {
+                                    "opcode":  "INVOKEVIRTUAL",
+                                    "target":  "bDm.qGB",
+                                    "occurrence":  1
+                                }
+                  },
+                  {
+                      "id":  "initial-track-cursor-highlight",
+                      "transform":  "REPLACE_INVOKE",
+                      "bridge":  {
+                                     "method":  "initialCursor",
+                                     "descriptor":  "(LbDm;Z)V",
+                                     "args":  [
+
+                                              ]
+                                 },
+                      "target":  "aGq.Gef",
+                      "match":  {
+                                    "opcode":  "INVOKEVIRTUAL",
+                                    "target":  "bDm.jTs",
+                                    "occurrence":  1
+                                }
+                  },
+                  {
+                      "id":  "change-cursor-highlight-second",
+                      "transform":  "REPLACE_INVOKE",
+                      "bridge":  {
+                                     "method":  "cursorSecond",
+                                     "descriptor":  "(LbDm;Z)V",
+                                     "args":  [
+
+                                              ]
+                                 },
+                      "target":  "aGq.Gef-2",
+                      "match":  {
+                                    "opcode":  "INVOKEVIRTUAL",
+                                    "target":  "bDm.jTs",
+                                    "occurrence":  2
+                                }
+                  },
+                  {
+                      "id":  "change-cursor-highlight-first",
+                      "transform":  "REPLACE_INVOKE",
+                      "bridge":  {
+                                     "method":  "cursorFirst",
+                                     "descriptor":  "(LbDm;Z)V",
+                                     "args":  [
+
+                                              ]
+                                 },
+                      "target":  "aGq.Gef-2",
+                      "match":  {
+                                    "opcode":  "INVOKEVIRTUAL",
+                                    "target":  "bDm.jTs",
+                                    "occurrence":  1
+                                }
+                  },
+                  {
+                      "id":  "clear-selection-highlight",
+                      "transform":  "REPLACE_INVOKE",
+                      "bridge":  {
+                                     "method":  "deselect",
+                                     "descriptor":  "(LbDm;Z)V",
+                                     "args":  [
+
+                                              ]
+                                 },
+                      "target":  "aGu.beI",
+                      "match":  {
+                                    "opcode":  "INVOKEVIRTUAL",
+                                    "target":  "bDm.iMb",
+                                    "occurrence":  1
+                                }
+                  },
+                  {
+                      "id":  "set-selection-highlight",
+                      "transform":  "REPLACE_INVOKE",
+                      "bridge":  {
+                                     "method":  "select",
+                                     "descriptor":  "(LbDm;Z)V",
+                                     "args":  [
+
+                                              ]
+                                 },
+                      "target":  "aGu.Gef",
+                      "match":  {
+                                    "opcode":  "INVOKEVIRTUAL",
+                                    "target":  "bDm.iMb",
+                                    "occurrence":  1
+                                }
+                  },
+                  {
+                      "id":  "track-height-capture",
+                      "transform":  "INSERT_AT_ENTRY",
+                      "bridge":  {
+                                     "method":  "captureTrackHeight",
+                                     "descriptor":  "(LbuZ;IZLjava/util/List;)V",
+                                     "args":  [
+                                                  "this",
+                                                  "arg1",
+                                                  "arg2",
+                                                  "arg3"
+                                              ]
+                                 },
+                      "target":  "buZ.beI"
+                  },
+                  {
+                      "id":  "track-height-fixed-rows",
+                      "transform":  "INSERT_BEFORE_FINAL_RETURN",
+                      "bridge":  {
+                                     "method":  "trackHeight",
+                                     "descriptor":  "()V",
+                                     "args":  [
+
+                                              ]
+                                 },
+                      "target":  "buZ.beI"
+                  },
+                  {
+                      "id":  "lane-height-capture",
+                      "transform":  "INSERT_AT_ENTRY",
+                      "bridge":  {
+                                     "method":  "captureLaneHeight",
+                                     "descriptor":  "(LbuZ;ILjava/util/List;)V",
+                                     "args":  [
+                                                  "this",
+                                                  "arg1",
+                                                  "arg2"
+                                              ]
+                                 },
+                      "target":  "buZ.beI-2"
+                  },
+                  {
+                      "id":  "lane-height-fixed-rows",
+                      "transform":  "INSERT_BEFORE_FINAL_RETURN",
+                      "bridge":  {
+                                     "method":  "laneHeight",
+                                     "descriptor":  "()V",
+                                     "args":  [
+
+                                              ]
+                                 },
+                      "target":  "buZ.beI-2"
+                  },
+                  {
+                      "id":  "resize-visible-track-header",
+                      "transform":  "REPLACE_INVOKE",
+                      "bridge":  {
+                                     "method":  "resizeTrackHeader",
+                                     "descriptor":  "(LbuT;I)V",
+                                     "args":  [
+
+                                              ]
+                                 },
+                      "target":  "buZ.beI-3",
+                      "match":  {
+                                    "opcode":  "INVOKEVIRTUAL",
+                                    "target":  "buT.beI",
+                                    "occurrence":  1
+                                }
+                  },
+                  {
+                      "id":  "resize-visible-main-header",
+                      "transform":  "REPLACE_INVOKE",
+                      "bridge":  {
+                                     "method":  "resizeMainHeader",
+                                     "descriptor":  "(LbuC;I)V",
+                                     "args":  [
+
+                                              ]
+                                 },
+                      "target":  "buZ.beI-3",
+                      "match":  {
+                                    "opcode":  "INVOKEVIRTUAL",
+                                    "target":  "buC.beI",
+                                    "occurrence":  1
+                                }
+                  },
+                  {
+                      "id":  "resize-visible-automation-lane",
+                      "transform":  "REPLACE_INVOKE",
+                      "bridge":  {
+                                     "method":  "resizeLane",
+                                     "descriptor":  "(LbtR;I)V",
+                                     "args":  [
+
+                                              ]
+                                 },
+                      "target":  "buZ.beI-4",
+                      "match":  {
+                                    "opcode":  "INVOKEVIRTUAL",
+                                    "target":  "btR.beI",
+                                    "occurrence":  1
+                                }
+                  },
+                  {
+                      "id":  "drop-regular-top-edge",
+                      "transform":  "REPLACE_INVOKE",
+                      "bridge":  {
+                                     "method":  "dropRegularTop",
+                                     "descriptor":  "(LbCf;DDLUXW;ILdKT;)Lcom/bitwig/flt/document/core/iface/clipboard/track/TrackInsertionPoint;",
+                                     "args":  [
+
+                                              ]
+                                 },
+                      "target":  "bCf.beI",
+                      "match":  {
+                                    "opcode":  "INVOKEVIRTUAL",
+                                    "target":  "bCf.beI-2",
+                                    "occurrence":  3
+                                }
+                  },
+                  {
+                      "id":  "drop-regular-bottom-edge",
+                      "transform":  "REPLACE_INVOKE",
+                      "bridge":  {
+                                     "method":  "dropRegularBottom",
+                                     "descriptor":  "(LbCf;DDLUXW;ILdKT;)Lcom/bitwig/flt/document/core/iface/clipboard/track/TrackInsertionPoint;",
+                                     "args":  [
+
+                                              ]
+                                 },
+                      "target":  "bCf.beI",
+                      "match":  {
+                                    "opcode":  "INVOKEVIRTUAL",
+                                    "target":  "bCf.beI-2",
+                                    "occurrence":  3
+                                }
+                  },
+                  {
+                      "id":  "drop-regular-between",
+                      "transform":  "REPLACE_INVOKE",
+                      "bridge":  {
+                                     "method":  "dropRegularBetween",
+                                     "descriptor":  "(LbCf;DDLUXW;ILdKT;)Lcom/bitwig/flt/document/core/iface/clipboard/track/TrackInsertionPoint;",
+                                     "args":  [
+
+                                              ]
+                                 },
+                      "target":  "bCf.beI",
+                      "match":  {
+                                    "opcode":  "INVOKEVIRTUAL",
+                                    "target":  "bCf.beI-2",
+                                    "occurrence":  3
+                                }
+                  },
+                  {
+                      "id":  "drop-regular-on-track",
+                      "transform":  "REPLACE_INVOKE",
+                      "bridge":  {
+                                     "method":  "dropRegularOnTrack",
+                                     "descriptor":  "(LbCf;DDLUXW;IZZLdKT;)Lcom/bitwig/flt/document/core/iface/clipboard/track/TrackInsertionPoint;",
+                                     "args":  [
+
+                                              ]
+                                 },
+                      "target":  "bCf.beI",
+                      "match":  {
+                                    "opcode":  "INVOKEVIRTUAL",
+                                    "target":  "bCf.beI-3",
+                                    "occurrence":  1
+                                }
+                  },
+                  {
+                      "id":  "drop-effect-top-edge",
+                      "transform":  "REPLACE_INVOKE",
+                      "bridge":  {
+                                     "method":  "dropEffectTop",
+                                     "descriptor":  "(LbCf;DDLUXW;ILdKT;)Lcom/bitwig/flt/document/core/iface/clipboard/track/TrackInsertionPoint;",
+                                     "args":  [
+
+                                              ]
+                                 },
+                      "target":  "bCf.beI-4",
+                      "match":  {
+                                    "opcode":  "INVOKEVIRTUAL",
+                                    "target":  "bCf.beI-2",
+                                    "occurrence":  4
+                                }
+                  },
+                  {
+                      "id":  "drop-effect-bottom-edge",
+                      "transform":  "REPLACE_INVOKE",
+                      "bridge":  {
+                                     "method":  "dropEffectBottom",
+                                     "descriptor":  "(LbCf;DDLUXW;ILdKT;)Lcom/bitwig/flt/document/core/iface/clipboard/track/TrackInsertionPoint;",
+                                     "args":  [
+
+                                              ]
+                                 },
+                      "target":  "bCf.beI-4",
+                      "match":  {
+                                    "opcode":  "INVOKEVIRTUAL",
+                                    "target":  "bCf.beI-2",
+                                    "occurrence":  4
+                                }
+                  },
+                  {
+                      "id":  "drop-effect-between",
+                      "transform":  "REPLACE_INVOKE",
+                      "bridge":  {
+                                     "method":  "dropEffectBetween",
+                                     "descriptor":  "(LbCf;DDLUXW;ILdKT;)Lcom/bitwig/flt/document/core/iface/clipboard/track/TrackInsertionPoint;",
+                                     "args":  [
+
+                                              ]
+                                 },
+                      "target":  "bCf.beI-4",
+                      "match":  {
+                                    "opcode":  "INVOKEVIRTUAL",
+                                    "target":  "bCf.beI-2",
+                                    "occurrence":  4
+                                }
+                  },
+                  {
+                      "id":  "drop-effect-on-track",
+                      "transform":  "REPLACE_INVOKE",
+                      "bridge":  {
+                                     "method":  "dropEffectOnTrack",
+                                     "descriptor":  "(LbCf;DDLUXW;IZZLdKT;)Lcom/bitwig/flt/document/core/iface/clipboard/track/TrackInsertionPoint;",
+                                     "args":  [
+
+                                              ]
+                                 },
+                      "target":  "bCf.beI-4",
+                      "match":  {
+                                    "opcode":  "INVOKEVIRTUAL",
+                                    "target":  "bCf.beI-3",
+                                    "occurrence":  3
+                                }
+                  },
+                  {
+                      "id":  "capture-drop-indicator",
+                      "transform":  "INSERT_AT_ENTRY",
+                      "bridge":  {
+                                     "method":  "captureDropIndicator",
+                                     "descriptor":  "(LaZJ;LOUi;)V",
+                                     "args":  [
+                                                  "this",
+                                                  "arg1"
+                                              ]
+                                 },
+                      "target":  "aZJ.beI"
+                  },
+                  {
+                      "id":  "pin-aware-drop-indicator",
+                      "transform":  "WRAP_OBJECT_RETURN",
+                      "bridge":  {
+                                     "method":  "dropIndicator",
+                                     "descriptor":  "(Lcom/bitwig/base/geom/Yk;)Lcom/bitwig/base/geom/Yk;",
+                                     "args":  [
+
+                                              ]
+                                 },
+                      "target":  "aZJ.beI"
+                  }
+              ],
+    "helper":  {
+                   "jar":  "helper.jar",
+                   "class":  "org.mike8040.pintrack.PinHooks"
+               },
+    "opens":  [
+                  "aGa.Bqk",
+                  "aZL",
+                  "aZM",
+                  "bCg",
+                  "bCg.beI-2",
+                  "bCh",
+                  "bCh.beI-2",
+                  "dwF.Gef",
+                  "dXL.init"
+              ]
+}

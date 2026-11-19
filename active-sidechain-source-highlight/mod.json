@@ -1,0 +1,306 @@
+{
+  "manifest_version": 2,
+  "mod": {
+    "id": "active-sidechain-source-highlight",
+    "name": "Devices: Active Sidechain Source Highlight",
+    "version": "0.1.0-dev.1",
+    "author": "Mike8040",
+    "description": "Marks the resolved sidechain source and its group path with the active theme's Grey 4.",
+    "documentation": "readme"
+  },
+  "built_against": {
+    "bitwig_version": "6.1.7",
+    "platform": "windows",
+    "architecture": "x64"
+  },
+  "resources": {
+    "readme": {
+      "kind": "file",
+      "path": "README.md",
+      "media_type": "text/markdown"
+    }
+  },
+  "targets": {
+    "com.bitwig.flt.widget.core.device.adZ.beI": {
+      "kind": "method",
+      "owner": "com/bitwig/flt/widget/core/device/adZ",
+      "name": "beI",
+      "descriptor": "(LDpH;)LdwF;"
+    },
+    "biI.beI": {
+      "kind": "method",
+      "owner": "biI",
+      "name": "beI",
+      "descriptor": "(LsMe;)LbiI;"
+    },
+    "ayo.beI": {
+      "kind": "method",
+      "owner": "ayo",
+      "name": "beI",
+      "descriptor": "(LclV;)V"
+    },
+    "aWA.beI": {
+      "kind": "method",
+      "owner": "aWA",
+      "name": "beI",
+      "descriptor": "(LlZt;LaRT;)LdwF;"
+    },
+    "biD.iMb": {
+      "kind": "method",
+      "owner": "biD",
+      "name": "iMb",
+      "descriptor": "(Ljava/lang/Object;)LdLy;"
+    },
+    "biL.beI": {
+      "kind": "method",
+      "owner": "biL",
+      "name": "beI",
+      "descriptor": "(LdMt;Lcom/bitwig/flt/document/core/iface/uVN;)V"
+    },
+    "dMt.MgQ": {
+      "kind": "method",
+      "owner": "dMt",
+      "name": "MgQ",
+      "descriptor": "(LdwF;)LdMt;"
+    },
+    "com.bitwig.flt.document.core.iface.zCn.cc_": {
+      "kind": "method",
+      "owner": "com/bitwig/flt/document/core/iface/zCn",
+      "name": "cc_",
+      "descriptor": "()Ljava/lang/String;"
+    },
+    "dMT.beI": {
+      "kind": "method",
+      "owner": "dMT",
+      "name": "beI",
+      "descriptor": "(Ljava/lang/String;LdMt;)LdMT;"
+    },
+    "dMd.beI": {
+      "kind": "method",
+      "owner": "dMd",
+      "name": "beI",
+      "descriptor": "(Lcom/bitwig/graphics/ijY;)V"
+    },
+    "egt.beI": {
+      "kind": "method",
+      "owner": "egt",
+      "name": "beI",
+      "descriptor": "(Lcom/bitwig/graphics/ijY;LdwF;DDDD)V"
+    },
+    "dMd.wBT": {
+      "kind": "method",
+      "owner": "dMd",
+      "name": "wBT",
+      "descriptor": "()V"
+    },
+    "dvR.sCA": {
+      "kind": "method",
+      "owner": "dvR",
+      "name": "sCA",
+      "descriptor": "(LekS;)V"
+    },
+    "dMd.MgQ": {
+      "kind": "field",
+      "owner": "dMd",
+      "name": "MgQ",
+      "descriptor": "LdvR;"
+    }
+  },
+  "hooks": [
+    {
+      "id": "identify-plugin-sidechain",
+      "transform": "REPLACE_INVOKE",
+      "bridge": {
+        "method": "pluginInput",
+        "descriptor": "(LsMe;)LbiI;",
+        "args": []
+      },
+      "target": "com.bitwig.flt.widget.core.device.adZ.beI",
+      "match": {
+        "opcode": "INVOKESTATIC",
+        "target": "biI.beI",
+        "occurrence": 1
+      }
+    },
+    {
+      "id": "identify-sidechain-widget",
+      "transform": "REPLACE_INVOKE",
+      "bridge": {
+        "method": "deviceInput",
+        "descriptor": "(LsMe;)LbiI;",
+        "args": []
+      },
+      "target": "ayo.beI",
+      "match": {
+        "opcode": "INVOKESTATIC",
+        "target": "biI.beI",
+        "occurrence": 1
+      }
+    },
+    {
+      "id": "identify-inline-sidechain",
+      "transform": "REPLACE_INVOKE",
+      "bridge": {
+        "method": "inlineInput",
+        "descriptor": "(LsMe;)LbiI;",
+        "args": []
+      },
+      "target": "aWA.beI",
+      "match": {
+        "opcode": "INVOKESTATIC",
+        "target": "biI.beI",
+        "occurrence": 1
+      }
+    },
+    {
+      "id": "capture-routing-leaf",
+      "transform": "INSERT_AT_ENTRY",
+      "bridge": {
+        "method": "captureLeaf",
+        "descriptor": "(LbiD;Ljava/lang/Object;)V",
+        "args": [
+          "this",
+          "arg1"
+        ]
+      },
+      "target": "biD.iMb"
+    },
+    {
+      "id": "mark-routing-leaf",
+      "transform": "WRAP_OBJECT_RETURN",
+      "bridge": {
+        "method": "leaf",
+        "descriptor": "(LdLy;)LdLy;",
+        "args": []
+      },
+      "target": "biD.iMb"
+    },
+    {
+      "id": "capture-track-submenu",
+      "transform": "REPLACE_INVOKE",
+      "bridge": {
+        "method": "trackPopup",
+        "descriptor": "(LdwF;)LdMt;",
+        "args": []
+      },
+      "target": "biL.beI",
+      "match": {
+        "opcode": "INVOKESTATIC",
+        "target": "dMt.MgQ",
+        "occurrence": 2
+      }
+    },
+    {
+      "id": "capture-group-submenu",
+      "transform": "REPLACE_INVOKE",
+      "bridge": {
+        "method": "groupPopup",
+        "descriptor": "(LdwF;)LdMt;",
+        "args": []
+      },
+      "target": "biL.beI",
+      "match": {
+        "opcode": "INVOKESTATIC",
+        "target": "dMt.MgQ",
+        "occurrence": 1
+      }
+    },
+    {
+      "id": "capture-track-identity",
+      "transform": "REPLACE_INVOKE",
+      "bridge": {
+        "method": "trackName",
+        "descriptor": "(Lcom/bitwig/flt/document/core/iface/zCn;)Ljava/lang/String;",
+        "args": []
+      },
+      "target": "biL.beI",
+      "match": {
+        "opcode": "INVOKEINTERFACE",
+        "target": "com.bitwig.flt.document.core.iface.zCn.cc_",
+        "occurrence": 2
+      }
+    },
+    {
+      "id": "capture-group-identity",
+      "transform": "REPLACE_INVOKE",
+      "bridge": {
+        "method": "groupName",
+        "descriptor": "(Lcom/bitwig/flt/document/core/iface/zCn;)Ljava/lang/String;",
+        "args": []
+      },
+      "target": "biL.beI",
+      "match": {
+        "opcode": "INVOKEINTERFACE",
+        "target": "com.bitwig.flt.document.core.iface.zCn.cc_",
+        "occurrence": 1
+      }
+    },
+    {
+      "id": "mark-track-path",
+      "transform": "REPLACE_INVOKE",
+      "bridge": {
+        "method": "trackHeader",
+        "descriptor": "(Ljava/lang/String;LdMt;)LdMT;",
+        "args": []
+      },
+      "target": "biL.beI",
+      "match": {
+        "opcode": "INVOKESTATIC",
+        "target": "dMT.beI",
+        "occurrence": 2
+      }
+    },
+    {
+      "id": "mark-group-path",
+      "transform": "REPLACE_INVOKE",
+      "bridge": {
+        "method": "groupHeader",
+        "descriptor": "(Ljava/lang/String;LdMt;)LdMT;",
+        "args": []
+      },
+      "target": "biL.beI",
+      "match": {
+        "opcode": "INVOKESTATIC",
+        "target": "dMT.beI",
+        "occurrence": 1
+      }
+    },
+    {
+      "id": "paint-active-source-row",
+      "transform": "REPLACE_INVOKE",
+      "bridge": {
+        "method": "paint",
+        "descriptor": "(Legt;Lcom/bitwig/graphics/ijY;LdwF;DDDD)V",
+        "args": []
+      },
+      "target": "dMd.beI",
+      "match": {
+        "opcode": "INVOKEVIRTUAL",
+        "target": "egt.beI",
+        "occurrence": 1
+      }
+    },
+    {
+      "id": "keep-active-source-text-light",
+      "transform": "REPLACE_INVOKE",
+      "bridge": {
+        "method": "hoverInk",
+        "descriptor": "(LdvR;LekS;)V",
+        "args": []
+      },
+      "target": "dMd.wBT",
+      "match": {
+        "opcode": "INVOKEVIRTUAL",
+        "target": "dvR.sCA",
+        "occurrence": 1
+      }
+    }
+  ],
+  "helper": {
+    "jar": "helper.jar",
+    "class": "org.mike8040.sidechain.SidechainHighlight"
+  },
+  "opens": [
+    "dMd.MgQ"
+  ]
+}

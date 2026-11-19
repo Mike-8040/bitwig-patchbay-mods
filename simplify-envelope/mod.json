@@ -1,0 +1,78 @@
+{
+  "manifest_version": 2,
+  "mod": {
+    "id": "simplify-envelope",
+    "name": "Automation: Simplify Envelope",
+    "version": "0.1.0-dev.1",
+    "author": "Mike8040",
+    "description": "Simplifies a selected continuous envelope with the Superpowers V56 tolerance.",
+    "documentation": "readme"
+  },
+  "built_against": {
+    "bitwig_version": "6.1.7",
+    "platform": "windows",
+    "architecture": "x64"
+  },
+  "resources": {
+    "readme": {
+      "kind": "file",
+      "path": "README.md",
+      "media_type": "text/markdown"
+    }
+  },
+  "targets": {
+    "bjw.beI": {
+      "kind": "method",
+      "owner": "bjw",
+      "name": "beI",
+      "descriptor": "(LdMt;LdwF;)V"
+    },
+    "com.bitwig.ramona.core.jyE.beI": {
+      "kind": "method",
+      "owner": "com/bitwig/ramona/core/jyE",
+      "name": "beI",
+      "descriptor": "(Ljava/lang/String;[Lcom/bitwig/ramona/core/dEy;)Z"
+    },
+    "com.bitwig.ramona.core.jyE.xgz": {
+      "kind": "method",
+      "owner": "com/bitwig/ramona/core/jyE",
+      "name": "xgz",
+      "descriptor": "()Z"
+    }
+  },
+  "hooks": [
+    {
+      "id": "capture-envelope-menu",
+      "transform": "INSERT_AT_ENTRY",
+      "bridge": {
+        "method": "capture",
+        "descriptor": "(LdMt;LdwF;)V",
+        "args": [
+          "arg1",
+          "arg2"
+        ]
+      },
+      "target": "bjw.beI"
+    },
+    {
+      "id": "simplify-selected-envelope-menu",
+      "transform": "INSERT_BEFORE_FINAL_RETURN",
+      "bridge": {
+        "method": "addMenuItem",
+        "descriptor": "(Lbjw;)V",
+        "args": [
+          "this"
+        ]
+      },
+      "target": "bjw.beI"
+    }
+  ],
+  "helper": {
+    "jar": "helper.jar",
+    "class": "org.mike8040.simplifyenvelope.SimplifyHooks"
+  },
+  "opens": [
+    "com.bitwig.ramona.core.jyE.beI",
+    "com.bitwig.ramona.core.jyE.xgz"
+  ]
+}

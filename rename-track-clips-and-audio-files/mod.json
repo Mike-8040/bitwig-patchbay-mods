@@ -1,0 +1,155 @@
+{
+  "manifest_version": 2,
+  "mod": {
+    "id": "rename-track-clips-and-audio-files",
+    "name": "Arranger: Rename Track Clips and Audio Files",
+    "version": "0.1.0-dev.1",
+    "author": "Mike8040",
+    "description": "Renames Arranger clips and referenced audio using the selected track name.",
+    "documentation": "readme"
+  },
+  "built_against": {
+    "bitwig_version": "6.1.7",
+    "platform": "windows",
+    "architecture": "x64"
+  },
+  "resources": {
+    "readme": {
+      "kind": "file",
+      "path": "README.md",
+      "media_type": "text/markdown"
+    }
+  },
+  "targets": {
+    "dwF.jTs": {
+      "kind": "method",
+      "owner": "dwF",
+      "name": "jTs",
+      "descriptor": "(DDLeqv;)LdMt;"
+    },
+    "com.bitwig.flt.app.ofb.Gef": {
+      "kind": "method",
+      "owner": "com/bitwig/flt/app/ofb",
+      "name": "Gef",
+      "descriptor": "(Ljava/io/File;)V"
+    },
+    "com.bitwig.flt.app.ijY.run": {
+      "kind": "method",
+      "owner": "com/bitwig/flt/app/ijY",
+      "name": "run",
+      "descriptor": "()V"
+    },
+    "com.bitwig.flt.app.ijY": {
+      "kind": "class",
+      "class": "com/bitwig/flt/app/ijY"
+    },
+    "com.bitwig.flt.app.ofb": {
+      "kind": "class",
+      "class": "com/bitwig/flt/app/ofb"
+    },
+    "com.bitwig.flt.app.ijY.sCA": {
+      "kind": "field",
+      "owner": "com/bitwig/flt/app/ijY",
+      "name": "sCA",
+      "descriptor": "Lcom/bitwig/flt/app/ofb;"
+    }
+  },
+  "hooks": [
+    {
+      "id": "remember-clicked-track",
+      "transform": "INSERT_AT_ENTRY",
+      "bridge": {
+        "method": "capture",
+        "descriptor": "(LdwF;DD)V",
+        "args": [
+          "this",
+          "arg1",
+          "arg3"
+        ]
+      },
+      "target": "dwF.jTs"
+    },
+    {
+      "id": "extend-native-track-menu",
+      "transform": "WRAP_OBJECT_RETURN",
+      "bridge": {
+        "method": "addRows",
+        "descriptor": "(LdMt;)LdMt;",
+        "args": []
+      },
+      "target": "dwF.jTs"
+    },
+    {
+      "id": "capture-native-destination",
+      "transform": "INSERT_AT_ENTRY",
+      "bridge": {
+        "method": "captureDestination",
+        "descriptor": "(Ljava/io/File;)V",
+        "args": [
+          "arg1"
+        ]
+      },
+      "target": "com.bitwig.flt.app.ofb.Gef"
+    },
+    {
+      "id": "after-native-reference-update",
+      "transform": "INSERT_BEFORE_FINAL_RETURN",
+      "bridge": {
+        "method": "completed",
+        "descriptor": "(Lcom/bitwig/flt/app/ofb;)V",
+        "args": [
+          "this"
+        ]
+      },
+      "target": "com.bitwig.flt.app.ofb.Gef"
+    },
+    {
+      "id": "capture-native-rename",
+      "transform": "INSERT_AT_ENTRY",
+      "bridge": {
+        "method": "captureJob",
+        "descriptor": "(Lcom/bitwig/flt/app/ijY;)V",
+        "args": [
+          "this"
+        ]
+      },
+      "target": "com.bitwig.flt.app.ijY.run"
+    },
+    {
+      "id": "observe-native-rename-error",
+      "transform": "REPLACE_INVOKE",
+      "bridge": {
+        "method": "renameFailed",
+        "descriptor": "(Ljava/io/IOException;)Ljava/lang/String;",
+        "args": []
+      },
+      "target": "com.bitwig.flt.app.ijY.run",
+      "match": {
+        "opcode": "INVOKEVIRTUAL",
+        "owner": "java/io/IOException",
+        "name": "getLocalizedMessage",
+        "descriptor": "()Ljava/lang/String;",
+        "occurrence": 1
+      }
+    },
+    {
+      "id": "release-native-rename-job",
+      "transform": "INSERT_BEFORE_FINAL_RETURN",
+      "bridge": {
+        "method": "cleanupJob",
+        "descriptor": "()V",
+        "args": []
+      },
+      "target": "com.bitwig.flt.app.ijY.run"
+    }
+  ],
+  "helper": {
+    "jar": "helper.jar",
+    "class": "org.mike8040.trackrename.RenameMenu"
+  },
+  "opens": [
+    "com.bitwig.flt.app.ijY",
+    "com.bitwig.flt.app.ijY.sCA",
+    "com.bitwig.flt.app.ofb"
+  ]
+}

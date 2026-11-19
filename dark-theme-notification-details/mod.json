@@ -1,0 +1,58 @@
+{
+  "manifest_version": 2,
+  "mod": {
+    "id": "dark-theme-notification-details",
+    "name": "Interface: Dark Theme Notification Details",
+    "author": "Mike8040",
+    "version": "0.1.0-dev.1",
+    "description": "Uses the active theme's Light Text color for notification details.",
+    "documentation": "readme"
+  },
+  "built_against": {
+    "bitwig_version": "6.1.7",
+    "platform": "windows",
+    "architecture": "x64"
+  },
+  "resources": {
+    "readme": {
+      "kind": "file",
+      "path": "README.md",
+      "media_type": "text/markdown"
+    }
+  },
+  "targets": {
+    "dOb.Gef": {
+      "kind": "method",
+      "owner": "dOb",
+      "name": "Gef",
+      "descriptor": "(LtWW;)V"
+    },
+    "egM.qGB": {
+      "kind": "method",
+      "owner": "egM",
+      "name": "qGB",
+      "descriptor": "()LegG;"
+    }
+  },
+  "hooks": [
+    {
+      "id": "notification-body-light-text",
+      "transform": "REPLACE_INVOKE",
+      "bridge": {
+        "method": "bodyColor",
+        "descriptor": "(LegM;)LegG;",
+        "args": []
+      },
+      "target": "dOb.Gef",
+      "match": {
+        "opcode": "INVOKEVIRTUAL",
+        "target": "egM.qGB",
+        "occurrence": 1
+      }
+    }
+  ],
+  "helper": {
+    "jar": "helper.jar",
+    "class": "org.mike8040.darkthemenotificationdetails.NotificationDetails"
+  }
+}

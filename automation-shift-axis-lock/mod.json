@@ -1,0 +1,94 @@
+{
+  "manifest_version": 2,
+  "mod": {
+    "id": "automation-shift-axis-lock",
+    "name": "Automation: Shift Axis Lock",
+    "version": "0.1.0-dev.1",
+    "author": "Mike8040",
+    "description": "Locks the native axis of a selected continuous automation point drag while Shift is held.",
+    "documentation": "readme"
+  },
+  "built_against": {
+    "bitwig_version": "6.1.7",
+    "platform": "windows",
+    "architecture": "x64"
+  },
+  "resources": {
+    "readme": {
+      "kind": "file",
+      "path": "README.md",
+      "media_type": "text/markdown"
+    }
+  },
+  "targets": {
+    "com.bitwig.flt.widget.core.timeline.interaction.AbstractMoveValueEventDragAction.updateEditEvents": {
+      "kind": "method",
+      "owner": "com/bitwig/flt/widget/core/timeline/interaction/AbstractMoveValueEventDragAction",
+      "name": "updateEditEvents",
+      "descriptor": "(LdLk;)V"
+    },
+    "com.bitwig.flt.widget.core.timeline.interaction.AbstractMoveValueEventDragAction.updateEditEvents-2": {
+      "kind": "method",
+      "owner": "com/bitwig/flt/widget/core/timeline/interaction/AbstractMoveValueEventDragAction",
+      "name": "updateEditEvents",
+      "descriptor": "(DDLeqv;)V"
+    },
+    "com.bitwig.flt.widget.core.timeline.interaction.AbstractMoveValueEventDragAction.mAllowTimeEditing": {
+      "kind": "field",
+      "owner": "com/bitwig/flt/widget/core/timeline/interaction/AbstractMoveValueEventDragAction",
+      "name": "mAllowTimeEditing",
+      "descriptor": "Z"
+    },
+    "com.bitwig.flt.widget.core.timeline.interaction.AbstractMoveValueEventDragAction.mAllowValueEditing": {
+      "kind": "field",
+      "owner": "com/bitwig/flt/widget/core/timeline/interaction/AbstractMoveValueEventDragAction",
+      "name": "mAllowValueEditing",
+      "descriptor": "Z"
+    },
+    "com.bitwig.flt.widget.core.timeline.interaction.AbstractMoveValueEventDragAction.mTotalNormalizedValueDelta": {
+      "kind": "field",
+      "owner": "com/bitwig/flt/widget/core/timeline/interaction/AbstractMoveValueEventDragAction",
+      "name": "mTotalNormalizedValueDelta",
+      "descriptor": "D"
+    }
+  },
+  "hooks": [
+    {
+      "id": "capture-before-point-drag",
+      "transform": "INSERT_AT_ENTRY",
+      "bridge": {
+        "method": "capture",
+        "descriptor": "(Lcom/bitwig/flt/widget/core/timeline/interaction/AbstractMoveValueEventDragAction;LdLk;)V",
+        "args": [
+          "this",
+          "arg1"
+        ]
+      },
+      "target": "com.bitwig.flt.widget.core.timeline.interaction.AbstractMoveValueEventDragAction.updateEditEvents"
+    },
+    {
+      "id": "apply-locked-delta",
+      "transform": "REPLACE_INVOKE",
+      "bridge": {
+        "method": "apply",
+        "descriptor": "(Lcom/bitwig/flt/widget/core/timeline/interaction/AbstractMoveValueEventDragAction;DDLeqv;)V",
+        "args": []
+      },
+      "target": "com.bitwig.flt.widget.core.timeline.interaction.AbstractMoveValueEventDragAction.updateEditEvents",
+      "match": {
+        "opcode": "INVOKEVIRTUAL",
+        "target": "com.bitwig.flt.widget.core.timeline.interaction.AbstractMoveValueEventDragAction.updateEditEvents-2",
+        "occurrence": 1
+      }
+    }
+  ],
+  "helper": {
+    "jar": "helper.jar",
+    "class": "org.mike8040.automationshiftaxislock.AxisLock"
+  },
+  "opens": [
+    "com.bitwig.flt.widget.core.timeline.interaction.AbstractMoveValueEventDragAction.mAllowTimeEditing",
+    "com.bitwig.flt.widget.core.timeline.interaction.AbstractMoveValueEventDragAction.mAllowValueEditing",
+    "com.bitwig.flt.widget.core.timeline.interaction.AbstractMoveValueEventDragAction.mTotalNormalizedValueDelta"
+  ]
+}
