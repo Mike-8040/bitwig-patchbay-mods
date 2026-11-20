@@ -1,9 +1,9 @@
 # Bitwig Patchbay Mods
 
 > [!IMPORTANT]
-> **Disclaimer:** These mods are an independent, unofficial community project by Mike8040 — they have **nothing to do with Bitwig or Bitwig GmbH** and are **not** affiliated with, endorsed by, or created in cooperation with Bitwig GmbH in any way.
+> **Disclaimer:** This tool is an independent, unofficial community project - it has **nothing to do with Bitwig or Bitwig GmbH** and is **not** affiliated with, endorsed by, or created in cooperation with Bitwig GmbH in any way.
 
-A collection of 19 workflow and UI mods for **Bitwig Studio** running on [Patchbay (BML)](https://github.com/shaboogen-dev/Patchbay). Built and tested against **Bitwig Studio 6.1.7** (Windows x64) with Patchbay `0.36.0-dev.14`.
+A collection of 19 workflow and UI mods for **Bitwig Studio** running on [Patchbay (BML)](https://github.com/shaboogen-dev/Patchbay). Built and tested against **Bitwig Studio 6.1.7** (Windows x64) with Patchbay `0.36.0-dev.14`. Other OS platforms may follow. 
 
 ## Install
 
