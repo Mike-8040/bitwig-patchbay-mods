@@ -2,10 +2,10 @@
   "manifest_version": 2,
   "mod": {
     "id": "automation-point-value",
-    "name": "Automation: Point Value",
+    "name": "Automation: Automation Point Value via Context Menu",
     "version": "0.1.0-dev.2",
     "author": "Mike8040",
-    "description": "Adds the native Inspector-style numeric control at the top of the point menu.",
+    "description": "Adds an Inspector-style numeric automation value input field to the context menu. Dragging value up/down is possible",
     "documentation": "readme"
   },
   "built_against": {

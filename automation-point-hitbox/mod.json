@@ -2,10 +2,10 @@
   "manifest_version": 2,
   "mod": {
     "id": "automation-point-hitbox",
-    "name": "Automation: Point Hitbox",
+    "name": "Automation: Point Focus Hitbox Correction",
     "version": "0.1.0-dev.1",
     "author": "Mike8040",
-    "description": "Enlarges the hitbox and selects the nearest existing continuous automation point.",
+    "description": "Improves selecting automation points. Bug since Bitwig Beta Phase where new points get created even if focus of existing point is correct. This behavior is noticeable mostly on 4K monitors.",
     "documentation": "readme"
   },
   "built_against": {

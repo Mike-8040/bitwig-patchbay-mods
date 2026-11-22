@@ -5,7 +5,7 @@
     "name": "Automation: Simplify Envelope",
     "version": "0.1.0-dev.1",
     "author": "Mike8040",
-    "description": "Simplifies a selected continuous envelope with the Superpowers V56 tolerance.",
+    "description": "Simplifies a selected automation envelope.",
     "documentation": "readme"
   },
   "built_against": {

@@ -6,7 +6,7 @@
     "area": "Track",
     "author": "Mike8040",
     "version": "0.1.0-dev.1",
-    "description": "Toggles selected Arranger groups or row heights in one direction.",
+    "description": "Shortcut mapping toggle collapses or expand selected track or groups",
     "documentation": "readme"
   },
   "built_against": {

@@ -2,10 +2,10 @@
   "manifest_version": 2,
   "mod": {
     "id": "plugin-space-for-transport",
-    "name": "Transport: Plug-in Space for Transport",
+    "name": "Transport: Space Bar Focus Fix",
     "version": "0.1.0-dev.1",
     "author": "Mike8040",
-    "description": "Routes unmodified Space to Bitwig transport in supported non-editing plug-in windows.",
+    "description": "Fixes stolen space bar focus of certain plugin packs like UADx, Izotope etc.",
     "documentation": "readme"
   },
   "built_against": {

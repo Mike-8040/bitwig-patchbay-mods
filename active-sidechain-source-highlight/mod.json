@@ -2,10 +2,10 @@
   "manifest_version": 2,
   "mod": {
     "id": "active-sidechain-source-highlight",
-    "name": "Devices: Active Sidechain Source Highlight",
+    "name": "Devices: Highlight Active Sidechain Source",
     "version": "0.1.0-dev.1",
     "author": "Mike8040",
-    "description": "Marks the resolved sidechain source and its group path with the active theme's Grey 4.",
+    "description": "Open a device's sidechain input menu to see the currently active routing source and its parent group path clearly highlighted.",
     "documentation": "readme"
   },
   "built_against": {

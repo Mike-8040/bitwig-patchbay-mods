@@ -5,7 +5,7 @@
     "name": "Devices: Latency on Hover",
     "version": "0.1.0-dev.1",
     "author": "Mike8040",
-    "description": "Shows cached device latency in the native footer after the mouse hints.",
+    "description": "Displays a device's latency in milliseconds in the footer on hover",
     "documentation": "readme"
   },
   "built_against": {

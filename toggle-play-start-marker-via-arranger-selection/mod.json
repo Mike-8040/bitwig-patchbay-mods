@@ -2,10 +2,10 @@
   "manifest_version": 2,
   "mod": {
     "id": "toggle-play-start-marker-via-arranger-selection",
-    "name": "Arranger: Toggle Play Start Marker via Arranger Selection",
+    "name": "Transport: Lock Play Head",
     "version": "0.1.0-dev.3",
     "author": "Mike8040",
-    "description": "Toggles Bitwig's live Arranger selection preference for the Play Start Marker.",
+    "description": "Shortcut mapping to toggle the \"Via the Arranger when selecting\" Play Start Marker preference",
     "documentation": "readme"
   },
   "built_against": {
