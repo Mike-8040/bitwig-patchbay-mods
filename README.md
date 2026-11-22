@@ -30,7 +30,7 @@ A collection of 19 workflow and UI mods for **Bitwig Studio** running on [Patchb
 |---|---|---|---|
 | Arranger: Expand/Collapse Toggle | Shortcut that collapses or restores selected Arranger groups and row heights in unison | `action-menu-composition-framework` | [`track-expand-collapse-toggle-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/track-expand-collapse-toggle-0.1.0-dev.1.zip) |
 | [Arranger: Loop Clip Gradient Removal](#arranger-loop-clip-gradient-removal) | Removes the horizontal overlay gradient on repeated segments of looped clips | — | [`loop-clip-gradient-removal-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/loop-clip-gradient-removal-0.1.0-dev.1.zip) |
-| [Arranger: Pin Track](#arranger-pin-track) | Pins selected Arranger tracks/groups at the top or Main at the bottom | — | [`pin-track-0.2.0-dev.2.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/pin-track-0.2.0-dev.2.zip) |
+| [Arranger: Pin Track](#arranger-pin-track) | Pins selected Arranger tracks/groups at the top or Main at the bottom | — | [`pin-track-0.2.0-dev.3.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/pin-track-0.2.0-dev.3/pin-track-0.2.0-dev.3.zip) |
 | [Arranger: Rename Track Clips and Audio Files](#arranger-rename-track-clips-and-audio-files) | Renames Arranger clips and referenced audio files using the track name | — | [`rename-track-clips-and-audio-files-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/rename-track-clips-and-audio-files-0.1.0-dev.1.zip) |
 | Arranger: Select Track Content | Adds *Select track content* to the Arranger track header context menu | — | [`select-track-content-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/select-track-content-0.1.0-dev.1.zip) |
 | Arranger: Toggle Play Start Marker via Arranger Selection | Shortcut to toggle the *Via the Arranger when selecting* Play Start Marker preference | `action-menu-composition-framework` | [`toggle-play-start-marker-via-arranger-selection-0.1.0-dev.3.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/toggle-play-start-marker-via-arranger-selection-0.1.0-dev.3.zip) |
@@ -66,7 +66,7 @@ Removes the horizontal overlay gradient drawn across repeated loop segments of A
 
 Right-click an Arranger track header and choose **Pin in Arranger** or **Unpin from Arranger**. Pinned tracks and groups stay fixed at the top of the Arranger (and Main stays at the bottom), saved per project ID, with full support for Clip Launcher scrolling and drag-and-drop track/device insertion.
 
-**Download:** [`pin-track-0.2.0-dev.2.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/pin-track-0.2.0-dev.2.zip)
+**Download:** [`pin-track-0.2.0-dev.3.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/pin-track-0.2.0-dev.3/pin-track-0.2.0-dev.3.zip)
 
 ![Arranger: Pin Track](images/pin-track.jpg)
 
