@@ -24,32 +24,6 @@ A collection of 19 workflow and UI mods for **Bitwig Studio** running on [Patchb
 
 ---
 
-## Mods Overview
-
-| Mod | Description | Requires | Download |
-|---|---|---|---|
-| Arranger: Expand/Collapse Toggle | Shortcut that collapses or restores selected Arranger groups and row heights in unison | `action-menu-composition-framework` | [`track-expand-collapse-toggle-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/track-expand-collapse-toggle-0.1.0-dev.1.zip) |
-| [Arranger: Loop Clip Gradient Removal](#arranger-loop-clip-gradient-removal) | Removes the horizontal overlay gradient on repeated segments of looped clips | — | [`loop-clip-gradient-removal-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/loop-clip-gradient-removal-0.1.0-dev.1.zip) |
-| [Arranger: Pin Track](#arranger-pin-track) | Pins selected Arranger tracks/groups at the top or Main at the bottom | — | [`pin-track-0.2.0-dev.3.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/pin-track-0.2.0-dev.3/pin-track-0.2.0-dev.3.zip) |
-| [Arranger: Rename Track Clips and Audio Files](#arranger-rename-track-clips-and-audio-files) | Renames Arranger clips and referenced audio files using the track name | — | [`rename-track-clips-and-audio-files-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/rename-track-clips-and-audio-files-0.1.0-dev.1.zip) |
-| Arranger: Select Track Content | Adds *Select track content* to the Arranger track header context menu | — | [`select-track-content-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/select-track-content-0.1.0-dev.1.zip) |
-| Arranger: Toggle Play Start Marker via Arranger Selection | Shortcut to toggle the *Via the Arranger when selecting* Play Start Marker preference | `action-menu-composition-framework` | [`toggle-play-start-marker-via-arranger-selection-0.1.0-dev.3.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/toggle-play-start-marker-via-arranger-selection-0.1.0-dev.3.zip) |
-| Automation: Point Hitbox | Scales continuous automation point hitboxes with UI scaling and prefers the nearest point | — | [`automation-point-hitbox-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/automation-point-hitbox-0.1.0-dev.1.zip) |
-| [Automation: Point Value](#automation-point-value) | Adds an Inspector-style numeric *Automation Value* field to the point context menu | — | [`automation-point-value-0.1.0-dev.2.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/automation-point-value-0.1.0-dev.2.zip) |
-| Automation: Shift Axis Lock | Locks continuous automation point dragging to one axis while holding Shift | — | [`automation-shift-axis-lock-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/automation-shift-axis-lock-0.1.0-dev.1.zip) |
-| [Automation: Show Automation Lane](#automation-show-automation-lane) | Adds *Show Automation Lane* to automated device parameter context menus | — | [`show-automation-lane-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/show-automation-lane-0.1.0-dev.1.zip) |
-| [Automation: Simplify Envelope](#automation-simplify-envelope) | Reduces redundant points in a selected continuous automation envelope in one undo step | — | [`simplify-envelope-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/simplify-envelope-0.1.0-dev.1.zip) |
-| Browser: Insert Device via Popup Browser | Shortcut that opens the native popup browser at the end of the active device chain | `action-menu-composition-framework` | [`insert-device-via-popup-browser-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/insert-device-via-popup-browser-0.1.0-dev.1.zip) |
-| Commands: Toggle Spray Can Tool | Shortcut to toggle between the Spray Can Tool and the previously active tool | `action-menu-composition-framework` | [`toggle-spray-can-tool-0.1.0-dev.2.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/toggle-spray-can-tool-0.1.0-dev.2.zip) |
-| [Devices: Active Sidechain Source Highlight](#devices-active-sidechain-source-highlight) | Highlights the active sidechain routing source and its group path in the source menu | — | [`active-sidechain-source-highlight-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/active-sidechain-source-highlight-0.1.0-dev.1.zip) |
-| Devices: Collapse/Expand Toggle | Shortcut to fold or unfold all selected devices in the focused device chain | `action-menu-composition-framework` | [`device-collapse-expand-toggle-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/device-collapse-expand-toggle-0.1.0-dev.1.zip) |
-| [Devices: Latency on Hover](#devices-latency-on-hover) | Displays a device's cached latency in milliseconds in the footer on hover | — | [`device-latency-on-hover-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/device-latency-on-hover-0.1.0-dev.1.zip) |
-| Interface: Dark Theme Notification Details | Uses the active theme's *Light Text* color for notification detail text | — | [`dark-theme-notification-details-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/dark-theme-notification-details-0.1.0-dev.1.zip) |
-| Interface: Dark Theme Text Selection | Keeps selected text readable with dark text on the bright selection background | — | [`dark-theme-text-selection-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/dark-theme-text-selection-0.1.0-dev.1.zip) |
-| Transport: Plug-in Space for Transport | Routes unmodified Space to Bitwig transport in supported non-editing plug-in windows | — | [`plugin-space-for-transport-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/plugin-space-for-transport-0.1.0-dev.1.zip) |
-
----
-
 ## Visual Showcase
 
 ### Arranger: Loop Clip Gradient Removal
@@ -125,6 +99,35 @@ Open a device's sidechain input menu to see the currently active routing source 
 ### Devices: Latency on Hover
 
 Hover over any device in the device chain to view its cached latency in milliseconds directly after the mouse hints in Bitwig's native footer bar.
+
+---
+
+## Mods Details
+
+| Mod | Description | Requires | Download |
+|---|---|---|---|
+| Arranger: Expand/Collapse Toggle | Shortcut mapping toggle collapses or expand selected track or groups | `action-menu-composition-framework` | [`track-expand-collapse-toggle-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/track-expand-collapse-toggle-0.1.0-dev.1.zip) |
+| [Arranger: Loop Clip Gradient Removal](#arranger-loop-clip-gradient-removal) | Removes the horizontal overlay gradient on looped clips | — | [`loop-clip-gradient-removal-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/loop-clip-gradient-removal-0.1.0-dev.1.zip) |
+| [Arranger: Pin Track](#arranger-pin-track) | Pins selected Arranger tracks/groups at the top or Main at the bottom | — | [`pin-track-0.2.0-dev.3.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/pin-track-0.2.0-dev.3/pin-track-0.2.0-dev.3.zip) |
+| [Arranger: Rename Track Clips and Audio Files](#arranger-rename-track-clips-and-audio-files) | Renames Arranger clips and referenced audio files using the track name | — | [`rename-track-clips-and-audio-files-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/rename-track-clips-and-audio-files-0.1.0-dev.1.zip) |
+| Arranger: Select Track Content | Adds *Select track content* to the Arranger track header context menu | — | [`select-track-content-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/select-track-content-0.1.0-dev.1.zip) |
+| Arranger: Lock Play Head | Shortcut mapping to toggle the *Via the Arranger when selecting* Play Start Marker preference | `action-menu-composition-framework` | [`toggle-play-start-marker-via-arranger-selection-0.1.0-dev.3.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/toggle-play-start-marker-via-arranger-selection-0.1.0-dev.3.zip) |
+| Automation: Point Focus Hitbox Correction | Improves selecting automation points. Bug since Bitwig Beta Phase where new points get created even if focus of existing point is correct. This behavior is noticeable mostly on 4K monitors.
+ | — | [`automation-point-hitbox-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/automation-point-hitbox-0.1.0-dev.1.zip) |
+| [Automation: Point Value](#automation-point-value) | Adds an Inspector-style numeric *Automation Value* input field to the context menu. Dragging value up/down is also possible with it | — | [`automation-point-value-0.1.0-dev.2.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/automation-point-value-0.1.0-dev.2.zip) |
+| Automation: Axis Lock via shift modifier | Locks continuous automation point dragging to one axis while holding Shift | — | [`automation-shift-axis-lock-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/automation-shift-axis-lock-0.1.0-dev.1.zip) |
+| [Automation: Show Automation Lane](#automation-show-automation-lane) | Adds *Show Automation Lane* to automated device parameter context menus | — | [`show-automation-lane-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/show-automation-lane-0.1.0-dev.1.zip) |
+| [Automation: Simplify Envelope](#automation-simplify-envelope) | Reduces redundant points in a selected continuous automation envelope in one undo step. Still fine-tuning it | — | [`simplify-envelope-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/simplify-envelope-0.1.0-dev.1.zip) |
+| Browser: Insert Device via Popup Browser | Shortcut that opens the native popup browser at the end of the active device chain | `action-menu-composition-framework` | [`insert-device-via-popup-browser-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/insert-device-via-popup-browser-0.1.0-dev.1.zip) |
+| Commands: Toggle Spray Can Tool | Shortcut to toggle between the Spray Can Tool and the previously active tool | `action-menu-composition-framework` | [`toggle-spray-can-tool-0.1.0-dev.2.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/toggle-spray-can-tool-0.1.0-dev.2.zip) |
+| [Devices: Highlight Active Sidechain Source](#devices-active-sidechain-source-highlight) | Highlights the active sidechain routing source and its group path in the source menu | — | [`active-sidechain-source-highlight-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/active-sidechain-source-highlight-0.1.0-dev.1.zip) |
+| Devices: Collapse/Expand Toggle | Shortcut to fold or unfold selected devices in the device panel | `action-menu-composition-framework` | [`device-collapse-expand-toggle-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/device-collapse-expand-toggle-0.1.0-dev.1.zip) |
+| [Devices: Latency on Hover](#devices-latency-on-hover) | Displays a device's latency in milliseconds in the footer on hover | — | [`device-latency-on-hover-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/device-latency-on-hover-0.1.0-dev.1.zip) |
+| Interface: Dark Theme Notification Details | Useful for dark themes. Uses the active theme's *Light Text* color for notification detail text | — | [`dark-theme-notification-details-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/dark-theme-notification-details-0.1.0-dev.1.zip) |
+| Interface: Dark Theme Text Selection | Useful for dark themes. Keeps selected text readable with dark text on the bright selection background | — | [`dark-theme-text-selection-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/dark-theme-text-selection-0.1.0-dev.1.zip) |
+| Transport: Plug-in Space for Transport | Fix for plugins like UADx which steal the space bar focus. | — | [`plugin-space-for-transport-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/plugin-space-for-transport-0.1.0-dev.1.zip) |
+
+---
 
 **Download:** [`device-latency-on-hover-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/device-latency-on-hover-0.1.0-dev.1.zip)
 
