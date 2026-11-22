@@ -28,7 +28,7 @@ A collection of 19 workflow and UI mods for **Bitwig Studio** running on [Patchb
 
 ### Arranger: Loop Clip Gradient Removal
 
-Removes the horizontal overlay gradient drawn across repeated loop segments of Arranger clips so looped clip colors stay clean and consistent across the timeline while keeping all standard clip drawing intact.
+Removes the horizontal overlay gradient on looped clips
 
 **Download:** [`loop-clip-gradient-removal-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/loop-clip-gradient-removal-0.1.0-dev.1.zip)
 
@@ -58,7 +58,7 @@ Adds **Rename Clips** and **Rename Audio Clips** directly below **Rename** in th
 
 ### Automation: Point Value
 
-Adds Bitwig's native Inspector-style **Automation Value** numeric control directly at the top of the continuous automation point context menu, complete with native `dB`, `%`, and `Hz` formatting. Dragging moves all selected points together by the same delta while respecting range boundaries, and typing sets an exact value for the entire selection.
+Adds an Inspector-style numeric *Automation Value* input field to the context menu. Dragging value up/down is also possible with it, complete with native `dB`, `%`, and `Hz` formatting. Dragging moves all selected points together by the same delta while respecting range boundaries, and typing sets an exact value for the entire selection.
 
 **Download:** [`automation-point-value-0.1.0-dev.2.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/automation-point-value-0.1.0-dev.2.zip)
 
@@ -78,7 +78,7 @@ Right-click an automated device parameter and select **Show Automation Lane** di
 
 ### Automation: Simplify Envelope
 
-Select at least three points on a continuous automation envelope and open the point context menu to run **Simplify Envelope**. Redundant points within a 2.5% normalized vertical tolerance are removed as a single Bitwig undo step while preserving endpoints, jumps, and existing curves.
+Select at least three points on a continuous automation envelope and open the point context menu to run **Simplify Envelope**. Redundant points within a 2.5% normalized vertical tolerance are removed as a single Bitwig undo step while preserving endpoints, jumps, and existing curves. Still fine-tuning it.
 
 **Download:** [`simplify-envelope-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/simplify-envelope-0.1.0-dev.1.zip)
 
@@ -88,7 +88,7 @@ Select at least three points on a continuous automation envelope and open the po
 
 ### Devices: Active Sidechain Source Highlight
 
-Open a device's sidechain input menu to see the currently active routing source and its parent group path clearly highlighted using the active theme's **Grey 4** accent and semibold native menu font, resolved by actual routing identity.
+Open a device's sidechain input menu to see the currently active routing source and its parent group path clearly highlighted. What it solves? Using a plugins output as sidechain source which is available on every track in a project, the selection box just shows the plugin name without any indication to which track it belongs to... 
 
 **Download:** [`active-sidechain-source-highlight-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/active-sidechain-source-highlight-0.1.0-dev.1.zip)
 
@@ -98,7 +98,11 @@ Open a device's sidechain input menu to see the currently active routing source 
 
 ### Devices: Latency on Hover
 
-Hover over any device in the device chain to view its cached latency in milliseconds directly after the mouse hints in Bitwig's native footer bar.
+Hover over any device in the device chain to view its latency in milliseconds in Bitwig's native footer bar.
+
+**Download:** [`device-latency-on-hover-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/device-latency-on-hover-0.1.0-dev.1.zip)
+
+![Devices: Latency on Hover](images/device-latency-on-hover.jpg)
 
 ---
 
@@ -126,9 +130,3 @@ Hover over any device in the device chain to view its cached latency in millisec
 | Interface: Dark Theme Notification Details | Useful for dark themes. Uses the active theme's *Light Text* color for notification detail text | — | [`dark-theme-notification-details-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/dark-theme-notification-details-0.1.0-dev.1.zip) |
 | Interface: Dark Theme Text Selection | Useful for dark themes. Keeps selected text readable with dark text on the bright selection background | — | [`dark-theme-text-selection-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/dark-theme-text-selection-0.1.0-dev.1.zip) |
 | Transport: Plug-in Space for Transport | Fix for plugins like UADx which steal the space bar focus. | — | [`plugin-space-for-transport-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/plugin-space-for-transport-0.1.0-dev.1.zip) |
-
----
-
-**Download:** [`device-latency-on-hover-0.1.0-dev.1.zip`](https://github.com/Mike-8040/bitwig-patchbay-mods/releases/download/v0.1.0/device-latency-on-hover-0.1.0-dev.1.zip)
-
-![Devices: Latency on Hover](images/device-latency-on-hover.jpg)
